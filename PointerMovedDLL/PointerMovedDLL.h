@@ -35,7 +35,7 @@ namespace WinRT
 
     typedef void* InstancePtr;
 
-    typedef void(*PointerMovedCallback) (PointerPointData* data);
+    typedef void(__stdcall *PointerMovedCallback) (PointerPointData* data);
 
     typedef WinRTErrorType(__cdecl *InitializeFunc)(InstancePtr* instancePtr, PointerMovedCallback callback);
     DLL_EXPORT_API WinRTErrorType __cdecl Initialize(InstancePtr* instancePtr, PointerMovedCallback callback);

@@ -36,6 +36,7 @@ namespace PointerMoved
             public uint id;
         }
 
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
         public delegate void PointerMovedCallBack(ref PointerPointData data);
 
         [DllImport("PointerMovedDLL.dll", CharSet = CharSet.Unicode, SetLastError = true)]
@@ -51,7 +52,7 @@ namespace PointerMoved
 
         private void OnPointerMoved(ref PointerPointData data)
         {
-            // Note: Probably should use a dispather here to update the UI, but this is just a demo...
+            // Note: Probably should use a dispatcher here to update the UI, but this is just a demo...
             pointerMovedText.Text = "X:" + data.x + " Y:" + data.y + " ID:" + data.id;
         }
     }
