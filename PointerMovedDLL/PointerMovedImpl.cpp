@@ -36,7 +36,7 @@ WinRTErrorType PointerMovedImpl::Initialize(PointerMovedCallback callback)
     }
     else
     {
-        result = WINRT_INITALIZATION_ERROR;
+        result = WINRT_INITIALIZATION_ERROR;
     }
 
     return result;

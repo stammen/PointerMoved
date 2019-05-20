@@ -27,7 +27,7 @@ namespace WinRT
         WINRT_WINDOWS_RUNTIME_ERROR,                // unable to initialize Windows Runtime
         WINRT_WINDOWS_VERSION_ERROR,                // this version of Windows does not support Windows::Services::Store
         WINRT_APP_PACKAGE_ERROR,                    // app is not running inside of an App Package
-		WINRT_INITALIZATION_ERROR,
+        WINRT_INITIALIZATION_ERROR,
 		WINRT_INVALID_PARAMETER_ERROR,
 		WINRT_MEMORY_ERROR,
 		WINRT_UNSPECIFIED_ERROR
