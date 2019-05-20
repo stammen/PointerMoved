@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -34,7 +37,6 @@ namespace PointerMoved
         }
 
         public delegate void PointerMovedCallBack(ref PointerPointData data);
-
 
         [DllImport("PointerMovedDLL.dll", CharSet = CharSet.Unicode, SetLastError = true)]
         private static extern int Initialize(ref IntPtr instancePtr, PointerMovedCallBack callback);

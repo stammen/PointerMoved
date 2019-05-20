@@ -4,7 +4,6 @@
 #pragma once
 
 #include "PointerMovedDLL.h"
-#include <Windows.h>
 
 namespace WinRT
 {

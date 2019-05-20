@@ -7,7 +7,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="PointerMovedDLL.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="PointerMovedImpl.cpp" />

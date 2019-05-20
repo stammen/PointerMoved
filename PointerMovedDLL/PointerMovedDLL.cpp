@@ -9,32 +9,31 @@
 
 namespace WinRT
 {
+    WinRTErrorType Initialize(InstancePtr* instancePtr, PointerMovedCallback callback)
+    {
+        *instancePtr = nullptr;
 
-	WinRTErrorType Initialize(InstancePtr* instancePtr, PointerMovedCallback callback)
-	{
-		*instancePtr = nullptr;
-		
-		PointerMovedImpl* instance = new PointerMovedImpl();
-		WinRTErrorType result = instance->Initialize(callback);
-		if (result != WINRT_NO_ERROR)
-		{
-			delete instance;
-			*instancePtr = nullptr;
-		}
-		else
-		{
-			*instancePtr = (InstancePtr)instance;
-		}
+        PointerMovedImpl* instance = new PointerMovedImpl();
+        WinRTErrorType result = instance->Initialize(callback);
+        if (result != WINRT_NO_ERROR)
+        {
+            delete instance;
+            *instancePtr = nullptr;
+        }
+        else
+        {
+            *instancePtr = (InstancePtr)instance;
+        }
 
-		return result;
-	}
+        return result;
+    }
 
-	void Dispose(InstancePtr instancePtr)
-	{
-		if (instancePtr)
-		{
-			delete instancePtr;
-		}
-	}
+    void Dispose(InstancePtr instancePtr)
+    {
+        if (instancePtr)
+        {
+            delete instancePtr;
+        }
+    }
 }
 
