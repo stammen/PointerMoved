@@ -41,7 +41,7 @@ You can now set breakpoints in the PointerMovedDLL project.
 
 ## Copying the PointerMovedDLL DLL to your App Package
 
-In this sample, PointerMovedDLL.DLL is manually loaded by the PointerMoved app. We need to manually copy the PointerMovedDLL.DLL
+In this sample, PointerMovedDLL.DLL is manually loaded by the PointerMoved app. We need to copy the PointerMovedDLL.DLL
 to the correct location in the App Package. We can do this by modifying the XML of the PointerMoved.csproj project.
 
 Add the following XML near the end of the PointerMoved.csproj (you can open this file with a text editor or Unload/Edit/Reload the file in Visual Studio)
