@@ -4,9 +4,6 @@
 #include "pch.h"
 #include "PointerMovedImpl.h"
 #include <string>
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// Licensed under the MIT License.
-
 #include <functional>
 
 using namespace WinRT;
