@@ -156,10 +156,14 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WindowsRuntimeComponent1\WindowsRuntimeComponent1.vcxproj">
-      <Project>{b6a39724-ed7a-4cd6-9ec3-d624a99ea697}</Project>
-      <Name>WindowsRuntimeComponent1</Name>
-    </ProjectReference>
+    <Content Include="$(SolutionDir)$(Platform)/$(Configuration)/PointerMovedDLL/PointerMovedDLL.dll">
+      <Link>PointerMovedDLL.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(SolutionDir)$(Platform)/$(Configuration)/PointerMovedDLL/PointerMovedDLL.pdb">
+      <Link>PointerMovedDLL.pdb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

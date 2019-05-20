@@ -15,6 +15,7 @@ Debug/
 Release/
 .vs/
 AppPackages/
+packages/
 BundleArtifacts/
 *.user
 
