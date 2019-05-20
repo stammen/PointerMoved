@@ -1,7 +1,8 @@
 # PointerMoved
 
 PointerMoved is an example of how to handle CoreWindow pointer moved events in C++ and pass the event data efficiently to a C# UWP app using a blittable struct.
-
+In this example, we have used a C++ Windows Univeral DLL instead of a WinRT Component to encapsulate the C++ pointer handing code. The ABI interface of a WinRT Component 
+does not allow for the passing of a blittable struct. By using a C++ Windows Univeral DLL, we are free to pass not WinRT types between the C# UWP app and the C++ DLL.
 
 ## Requirements
 
