@@ -59,8 +59,6 @@ Add the following XML near the end of the PointerMoved.csproj (you can open this
   </ItemGroup>
 ```
 
-Note: You can use this technique to add other files to your App Package that are missed by the Packaging Project
-
 This XML will automatically copy the correct build of the PointerMovedDLL.DLL to your App Package.
 
 ## Accessing Windows 10 APIs from a C++ Windows Universal DLL
