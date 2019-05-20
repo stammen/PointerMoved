@@ -37,7 +37,7 @@ We need to change the Debug properties of the PointerMoved project to use the Na
 
 * Set Debugger Type | Background task process to Mixed
 
-You can now set breakpoints in the PointerMovedDLL.
+You can now set breakpoints in the PointerMovedDLL project.
 
 ## Copying the PointerMovedDLL DLL to your App Package
 
