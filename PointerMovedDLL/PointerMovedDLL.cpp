@@ -9,12 +9,12 @@
 
 namespace WinRT
 {
-    WinRTErrorType Initialize(InstancePtr* instancePtr, PointerMovedCallback callback)
+    WinRTErrorType Initialize(InstancePtr* instancePtr, Windows::UI::Xaml::Controls::SwapChainPanel ^swapChainPanel, PointerMovedCallback callback)
     {
         *instancePtr = nullptr;
 
         PointerMovedImpl* instance = new PointerMovedImpl();
-        WinRTErrorType result = instance->Initialize(callback);
+        WinRTErrorType result = instance->Initialize(callback, swapChainPanel);
         if (result != WINRT_NO_ERROR)
         {
             delete instance;

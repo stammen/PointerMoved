@@ -37,8 +37,8 @@ namespace WinRT
 
     typedef void(__stdcall *PointerMovedCallback) (PointerPointData* data);
 
-    typedef WinRTErrorType(__cdecl *InitializeFunc)(InstancePtr* instancePtr, PointerMovedCallback callback);
-    DLL_EXPORT_API WinRTErrorType __cdecl Initialize(InstancePtr* instancePtr, PointerMovedCallback callback);
+    typedef WinRTErrorType(__cdecl *InitializeFunc)(InstancePtr* instancePtr, Windows::UI::Xaml::Controls::SwapChainPanel ^swapChainPanel, PointerMovedCallback callback);
+    DLL_EXPORT_API WinRTErrorType __cdecl Initialize(InstancePtr* instancePtr, Windows::UI::Xaml::Controls::SwapChainPanel ^swapChainPanel, PointerMovedCallback callback);
  
     typedef void(__cdecl *FreeFunc)(InstancePtr instancePtr);
     DLL_EXPORT_API void __cdecl Dispose(InstancePtr instancePtr);

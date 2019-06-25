@@ -2,6 +2,7 @@
 // Licensed under the MIT License.
 
 using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -40,20 +41,19 @@ namespace PointerMoved
         public delegate void PointerMovedCallBack(ref PointerPointData data);
 
         [DllImport("PointerMovedDLL.dll", CharSet = CharSet.Unicode, SetLastError = true)]
-        private static extern int Initialize(ref IntPtr instancePtr, PointerMovedCallBack callback);
+        private static extern int Initialize(ref IntPtr instancePtr, Windows.UI.Xaml.Controls.SwapChainPanel swapChainPanel, PointerMovedCallBack callback);
 
         private IntPtr m_pointerMoved;
 
         public MainPage()
         {
             this.InitializeComponent();
-            var result = Initialize(ref m_pointerMoved, OnPointerMoved);
+            var result = Initialize(ref m_pointerMoved, swapChainPanel, OnPointerMoved);
         }
 
         private void OnPointerMoved(ref PointerPointData data)
         {
-            // Note: Probably should use a dispatcher here to update the UI, but this is just a demo...
-            pointerMovedText.Text = "X:" + data.x + " Y:" + data.y + " ID:" + data.id;
+            Debug.WriteLine("Point received");
         }
     }
 }

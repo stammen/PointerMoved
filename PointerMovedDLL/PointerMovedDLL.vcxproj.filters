@@ -10,11 +10,13 @@
     <ClCompile Include="PointerMovedDLL.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="PointerMovedImpl.cpp" />
+    <ClCompile Include="DeviceResources.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PointerMovedDLL.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="PointerMovedImpl.h" />
+    <ClInclude Include="DeviceResources.h" />
   </ItemGroup>
 </Project>
